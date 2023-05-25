@@ -276,6 +276,9 @@ GameObject:
   - component: {fileID: 110245676}
   - component: {fileID: 110245678}
   - component: {fileID: 110245677}
+  - component: {fileID: 110245681}
+  - component: {fileID: 110245680}
+  - component: {fileID: 110245679}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -298,8 +301,8 @@ Transform:
   - {fileID: 606998174}
   - {fileID: 1201494728}
   - {fileID: 101343861}
-  - {fileID: 868363154}
   - {fileID: 1861329958}
+  - {fileID: 868363154}
   m_Father: {fileID: 267902990}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -372,6 +375,47 @@ WheelJoint2D:
   m_Motor:
     m_MotorSpeed: 0
     m_MaximumMotorForce: 10000
+--- !u!114 &110245679
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 110245674}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 724300bfd08e414fa76758ce9dc9f81f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _frontWheel: {fileID: 1861329960}
+  _backWheel: {fileID: 868363156}
+  _speed: 150
+--- !u!114 &110245680
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 110245674}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd03d2e015cf4e6383b13ae20baa1174, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &110245681
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 110245674}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd5132c3b529475cae07955d38833ab3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _playerInput: {fileID: 110245680}
+  _playerMovement: {fileID: 110245679}
 --- !u!1 &267902989
 GameObject:
   m_ObjectHideFlags: 0
@@ -925,7 +969,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 110245675}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &868363155
 SpriteRenderer:
@@ -1015,7 +1059,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.32
+  m_Radius: 0.3
 --- !u!1 &1201494727
 GameObject:
   m_ObjectHideFlags: 0
@@ -1194,7 +1238,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 110245675}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1861329959
 SpriteRenderer:
@@ -1284,4 +1328,4 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.32
+  m_Radius: 0.3
