@@ -387,9 +387,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 724300bfd08e414fa76758ce9dc9f81f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _wholeCar: {fileID: 110245676}
   _frontWheel: {fileID: 1861329960}
   _backWheel: {fileID: 868363156}
-  _speed: 150
+  _speed: 100
+  _rotationSpeed: 100
 --- !u!114 &110245680
 MonoBehaviour:
   m_ObjectHideFlags: 0
