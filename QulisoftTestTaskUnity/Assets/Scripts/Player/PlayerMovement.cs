@@ -16,9 +16,9 @@ namespace QulisoftTestTask.Player
         {
             int direction = isMovingForward ? 1 : -1;
 
-            _frontWheel.AddTorque(-direction * _speed * Time.fixedDeltaTime);
-            _backWheel.AddTorque(-direction * _speed * Time.fixedDeltaTime);
-            _wholeCar.AddTorque(-direction * _rotationSpeed * Time.fixedDeltaTime);
+            _frontWheel.AddTorque(-direction * _speed * Time.deltaTime);
+            _backWheel.AddTorque(-direction * _speed * Time.deltaTime);
+            _wholeCar.AddTorque(-direction * _rotationSpeed * Time.deltaTime);
         }
     }
 }
