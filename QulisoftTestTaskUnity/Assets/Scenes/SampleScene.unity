@@ -497,7 +497,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _fuelAmountChanged: {fileID: 11400000, guid: 4bda89a441a4552439a45c53b0f2a182, type: 2}
-  _onFuelEnded: {fileID: 11400000, guid: c03609c1e2fd1d64880311c71b094ab1, type: 2}
+  _onPlayerLoose: {fileID: 11400000, guid: c03609c1e2fd1d64880311c71b094ab1, type: 2}
   _drainSpeed: 3
 --- !u!1 &267902989
 GameObject:
@@ -1372,7 +1372,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _fuelAmountChanged: {fileID: 11400000, guid: 4bda89a441a4552439a45c53b0f2a182, type: 2}
-  _onFuelEnded: {fileID: 11400000, guid: c03609c1e2fd1d64880311c71b094ab1, type: 2}
+  _onPlayerLoose: {fileID: 11400000, guid: c03609c1e2fd1d64880311c71b094ab1, type: 2}
   _uiFuelShower: {fileID: 1049477271}
   _looseScreenController: {fileID: 2045594374}
 --- !u!1 &690603477
@@ -1832,6 +1832,7 @@ GameObject:
   - component: {fileID: 1201494732}
   - component: {fileID: 1201494731}
   - component: {fileID: 1201494730}
+  - component: {fileID: 1201494733}
   m_Layer: 0
   m_Name: DriverHead
   m_TagString: Untagged
@@ -1967,6 +1968,19 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0.07}
   serializedVersion: 2
   m_Radius: 0.23
+--- !u!114 &1201494733
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1201494727}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1132a27fd9dd4653a14090c69631cecd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _onPlayerLoose: {fileID: 11400000, guid: c03609c1e2fd1d64880311c71b094ab1, type: 2}
 --- !u!1 &1255181939
 GameObject:
   m_ObjectHideFlags: 0
@@ -2234,7 +2248,7 @@ GameObject:
   - component: {fileID: 1526304316}
   m_Layer: 0
   m_Name: Ground
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

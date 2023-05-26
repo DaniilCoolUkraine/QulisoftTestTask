@@ -6,7 +6,7 @@ namespace QulisoftTestTask.Player
     public class FuelController : MonoBehaviour
     {
         [SerializeField] private FloatEventSO _fuelAmountChanged;
-        [SerializeField] private EventSO _onFuelEnded;
+        [SerializeField] private EventSO _onPlayerLoose;
 
         [SerializeField] private float _drainSpeed;
 
@@ -24,7 +24,7 @@ namespace QulisoftTestTask.Player
 
                 if (value <= 0)
                 {
-                    _onFuelEnded.Invoke();
+                    _onPlayerLoose.Invoke();
                 }
             }
         }

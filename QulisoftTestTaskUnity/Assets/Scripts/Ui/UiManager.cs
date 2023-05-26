@@ -7,7 +7,7 @@ namespace QulisoftTestTask.Ui
     {
         [Header("Events")]
         [SerializeField] private FloatEventSO _fuelAmountChanged;
-        [SerializeField] private EventSO _onFuelEnded;
+        [SerializeField] private EventSO _onPlayerLoose;
 
         [Header("Components")] 
         [SerializeField] private UiFuelShower _uiFuelShower;
@@ -16,13 +16,13 @@ namespace QulisoftTestTask.Ui
         private void OnEnable()
         {
             _fuelAmountChanged.OnValueChanged += _uiFuelShower.UpdateFuelFill;
-            _onFuelEnded.OnInvoked += _looseScreenController.SwitchScreen;
+            _onPlayerLoose.OnInvoked += _looseScreenController.SwitchScreen;
         }
         
         private void OnDisable()
         {
             _fuelAmountChanged.OnValueChanged -= _uiFuelShower.UpdateFuelFill;
-            _onFuelEnded.OnInvoked -= _looseScreenController.SwitchScreen;
+            _onPlayerLoose.OnInvoked -= _looseScreenController.SwitchScreen;
         }
     }
 }
