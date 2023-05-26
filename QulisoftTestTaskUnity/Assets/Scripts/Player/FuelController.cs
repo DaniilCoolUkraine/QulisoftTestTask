@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace QulisoftTestTask.Player
 {
-    public class FuelController : MonoBehaviour
+    public class FuelController : MonoBehaviour, ICollector
     {
         [SerializeField] private FloatEventSO _fuelAmountChanged;
         [SerializeField] private EventSO _onPlayerLoose;
@@ -40,6 +40,11 @@ namespace QulisoftTestTask.Player
                 return;
 
             CurrentFuelAmount -= _drainSpeed * Time.deltaTime;
+        }
+
+        public void Refuel()
+        {
+            CurrentFuelAmount = _maxFuelAmount;
         }
     }
 }
